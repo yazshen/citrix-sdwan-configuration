@@ -2,7 +2,7 @@
 
 ## 更新时间
 
-2021.05.20
+2021.05.23
 
 ## 1. 实验拓扑
 
@@ -22,7 +22,7 @@ Citrix SD-WAN VPX安装手册：https://docs.citrix.com/en-us/citrix-sd-wan-plat
 
 | 组件               | 版本                                                         |
 | ------------------ | ------------------------------------------------------------ |
-| Hypervisor         | Citrix Hypervisor 8.2                                        |
+| Hypervisor         | ESXi 6.7                                                     |
 | Switch             | Hypervisor vSwitch                                           |
 | Router             | vyOS 1.4                                                     |
 | SD-WAN             | SD-WAN VPX 14.0 (14.x版本是管控一体解决方案的长期稳定支持版本) |
@@ -58,11 +58,8 @@ Citrix SD-WAN管控一体解决方案是面向企业级用户的最佳解决方�
 
 ```
 management_ip
-
 set interface 192.168.210.12 255.255.255.0 192.168.210.254
-
 apply
-
 y
 ```
 
@@ -397,7 +394,7 @@ SiteC: Internet线路
 
 ![](./images/citrix-sdwan-101-lab01-62.png)
 
-## 13.0 检查SD-WAN网络状态
+## 13. 检查SD-WAN网络状态
 
 访问SiteA(MCN角色)的管理界面，点击"Monitoring - Statistics"，选择"Show"下拉框为"Paths(Summary)"，查看隧道状态
 
@@ -406,4 +403,97 @@ SiteC: Internet线路
 选择"Show"下拉框为"Routes"，查看路由表
 
 ![](./images/citrix-sdwan-101-lab01-64.png)
+
+## 14. Citrix SD-WAN Center安装配置
+
+下载Citrix SD-WAN Center部署文件后，在虚拟化平台完成部署。然后：
+
+1. 增加第二个Hard Disk，按需选择容量，参考：https://docs.citrix.com/en-us/citrix-sd-wan-center/current-release/system-requirements-and-installation.html
+2. 修改虚拟化兼容属性为ESXi 6.5
+
+![](./images/citrix-sdwan-101-lab01-65.png)
+
+启动虚拟机后，使用默认用户名密码 admin / password登录。然后输入以下命令配置管理地址
+
+```
+management_ip
+set interface 192.168.210.101 255.255.255.0 192.168.210.254
+y
+```
+
+![](./images/citrix-sdwan-101-lab01-66.png)
+
+打开浏览器，访问管理地址，使用默认用户名密码登录：admin / password。点击"Administration - Global Settings"，配置时区和NTP服务器地址
+
+![](./images/citrix-sdwan-101-lab01-67.png)
+
+点击"Administration - Storage Maintenance"，选择Disk 2为Active，然后点击Apply
+
+![](./images/citrix-sdwan-101-lab01-68.png)
+
+等待数分钟后，完成存储空间切换
+
+![](./images/citrix-sdwan-101-lab01-69.png)
+
+点击"Configuration - Network Discovery - SSL Certificate"，点击"Regenerate Certificate"（仅第一次操作），然后点击"Download Certificate"下载SD-WAN Center证书
+
+![](./images/citrix-sdwan-101-lab01-70.png)
+
+浏览器访问SiteA(MCN)控制器管理页面，然后点击"Configuration - Virtual WAN - SD-WAN Center Certification"，点击"Choose File"，选择刚才下载的SD-WAN Center证书，然后点击"Upload and Install"
+
+![](./images/citrix-sdwan-101-lab01-71.png)
+
+在相同页面上选择"MCN Certificate Management"，点击"Regenerate Certificate"（仅第一次操作），然后点击"Download Certificate"
+
+![](./images/citrix-sdwan-101-lab01-72.png)
+
+返回到SD-WAN Center管理页面，点击"Configuration - Network Discovery - SSL Certificate"，点击"Browse"并上传刚才下载的MCN证书
+
+![](./images/citrix-sdwan-101-lab01-73.png)
+
+点击"Configuration - Network Discovery - Discovery Settings"，输入MCN控制器带外管理地址，然后点击"Test"和"Rediscover"
+
+![](./images/citrix-sdwan-101-lab01-74.png)
+
+点击"Configuration - Network Discovery - Inventory and Status"，选中所有站点的"Poll"选型，然后点击"Apply"
+
+![](./images/citrix-sdwan-101-lab01-75.png)
+
+等待数分钟后，完成数据同步
+
+![](./images/citrix-sdwan-101-lab01-76.png)
+
+## 15. Citrix SD-WAN Center运维监控
+
+点击"Configuration - Network Configuration"，然后点击"Import..."，通过MCN导入SD-WAN当前配置
+
+![](./images/citrix-sdwan-101-lab01-77.png)
+
+点击箭头按钮，打开Network Map编辑器
+
+![](./images/citrix-sdwan-101-lab01-78.png)
+
+![](./images/citrix-sdwan-101-lab01-79.png)
+
+点击"Set/Clear Background"，选择背景图片
+
+![](./images/citrix-sdwan-101-lab01-80.png)
+
+![](./images/citrix-sdwan-101-lab01-81.png)
+
+点击"Auto Populate"，显示当前SD-WAN网络内的站点
+
+![](./images/citrix-sdwan-101-lab01-82.png)
+
+选择Network Map需要显示的数据内容
+
+![](./images/citrix-sdwan-101-lab01-83.png)
+
+点击"Save"完成Network Map配置并保存
+
+![](./images/citrix-sdwan-101-lab01-84.png)
+
+点击"Monitoring - Network Map"，查看SD-WAN网络监控
+
+![](./images/citrix-sdwan-101-lab01-85.png)
 
