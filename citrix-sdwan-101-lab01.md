@@ -25,8 +25,8 @@ Citrix SD-WAN VPX安装手册：https://docs.citrix.com/en-us/citrix-sd-wan-plat
 | Hypervisor         | ESXi 6.7                                                     |
 | Switch             | Hypervisor vSwitch                                           |
 | Router             | vyOS 1.4                                                     |
-| SD-WAN             | SD-WAN VPX 14.0 (14.x版本是管控一体解决方案的长期稳定支持版本) |
-| SD-WAN集中管理平台 | SD-WAN Center 14.0                                           |
+| SD-WAN             | SD-WAN VPX 11.4.0 (11.4.x版本是管控一体解决方案的长期稳定支持版本) |
+| SD-WAN集中管理平台 | SD-WAN Center 11.4.0                                           |
 | PC                 | Windows XP                                                   |
 
 ## 4. 方案特点
