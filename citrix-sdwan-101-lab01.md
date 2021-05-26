@@ -1,5 +1,9 @@
 # LAB01: 管控一体解决方案
 
+## 作者
+
+Yazhong Shen(yazhong.shen@citrix.com)
+
 ## 更新时间
 
 2021.05.23
@@ -26,7 +30,7 @@ Citrix SD-WAN VPX安装手册：https://docs.citrix.com/en-us/citrix-sd-wan-plat
 | Switch             | Hypervisor vSwitch                                           |
 | Router             | vyOS 1.4                                                     |
 | SD-WAN             | SD-WAN VPX 11.4.0 (11.4.x版本是管控一体解决方案的长期稳定支持版本) |
-| SD-WAN集中管理平台 | SD-WAN Center 11.4.0                                           |
+| SD-WAN集中管理平台 | SD-WAN Center 11.4.0                                         |
 | PC                 | Windows XP                                                   |
 
 ## 4. 方案特点
