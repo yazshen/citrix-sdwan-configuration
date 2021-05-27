@@ -166,7 +166,7 @@ SD-WAN设备可以通过OOB带外管理网络访问Orchestrator for On-Premise�
 
 根据实验系统信息，变更如下配置，然后点击"Next"
 
-1. Device Model: VPX
+1. Device Model: VPX
 2. Sub-Model: BASE
 3. Site Role: MCN
 4. Bandwidth Tier(Mbps): 1,000
