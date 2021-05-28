@@ -43,7 +43,6 @@ Citrix SD-WAN管控分离方案是基于行业用户需求，实现多租户管�
 2. 许可集中管理和分配
 3. 零接触部署
 4. NAT模式部署
-5. 适合零售行业用户需求
 
 ## 5. SD-WAN VPX安装
 
@@ -166,7 +165,7 @@ SD-WAN设备可以通过OOB带外管理网络访问Orchestrator for On-Premise�
 
 根据实验系统信息，变更如下配置，然后点击"Next"
 
-1. Device Model: VPX
+1. Device Model: VPX
 2. Sub-Model: BASE
 3. Site Role: MCN
 4. Bandwidth Tier(Mbps): 1,000
