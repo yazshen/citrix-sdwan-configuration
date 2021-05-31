@@ -55,8 +55,7 @@ Citrix SD-WAN管控分离方案是基于行业用户需求，实现多租户管�
 从Citrix网站下载对应版本的部署模版，在Hypervisor平台上完成部署。编辑虚拟机配置：
 
 1. 按需修改CPU, Memory, Hard Disk配置，参考：https://docs.citrix.com/en-us/citrix-sd-wan-orchestrator-on-premises/system-requirements-installation.html
-
-~~2. 调整虚拟机兼容性属性为：ESXi 6.5 and later~~（暂时不要修改，会造成Reboot Orchestrator VM功能异常）
+2. ~~调整虚拟机兼容性属性为：ESXi 6.5 and later~~（暂时不要修改，会造成Reboot Orchestrator VM功能异常）
 
 ## 7. Orchestrator for On-Premise管理网络配置
 
