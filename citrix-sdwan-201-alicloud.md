@@ -1,5 +1,13 @@
 # 阿里云通过自定义镜像方式部署Citrix SD-WAN
 
+## 作者
+
+Yazhong Shen (yazhong.shen@citrix.com)
+
+## 更新时间
+
+2021.06.17
+
 ## 下载Citrix SD-WAN VPX for KVM镜像
 
 首先，从Citrix官方网站下载VPX for KVM镜像
