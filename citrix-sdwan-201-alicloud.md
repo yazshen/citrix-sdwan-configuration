@@ -96,7 +96,7 @@ OSS Object地址：输入我们刚才复制的文件URL
 
 系统盘大小：可选40GiB、120GiB、240GiB，建议240GiB
 
-（参考依据：https://docs.citrix.com/en-us/citrix-sd-wan-platforms/vpx-models/vpx-se/prerequisites.html）
+（参考依据：https://docs.citrix.com/en-us/citrix-sd-wan-platforms/vpx-models/vpx-se/prerequisites.html)
 
 系统架构：x86_64
 
