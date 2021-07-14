@@ -124,7 +124,7 @@ SiteA: MSTP专线
 2. Access Type: Private Intranet
 3. Physical Rate: 20000 kbps
 4. Public IPv4 Address: None
-5. Congestion Threshold: 1000000
+5. Congestion Threshold: 100,000 (100ms)
 
 ![](./images/citrix-sdwan-101-lab01-13.png)
 
@@ -147,7 +147,7 @@ SiteA: Internet线路
 2. Access Type: Public Internet
 3. Physical Rate: 50000 kbps
 4. Public IPv4 Address: 77.77.77.11
-5. Congestion Threshold: 1000000
+5. Congestion Threshold: 100,000 (100ms)
 
 ![](./images/citrix-sdwan-101-lab01-16.png)
 
@@ -195,7 +195,7 @@ SiteB: MSTP专线
 2. Access Type: Private Intranet
 3. Physical Rate: 10000 kbps
 4. Autodetect Public IP: None
-5. Congestion Threshold: 1000000
+5. Congestion Threshold: 100,000 (100ms)
 
 ![](./images/citrix-sdwan-101-lab01-23.png)
 
@@ -218,7 +218,7 @@ SiteB: Internet线路
 2. Access Type: Public Internet
 3. Physical Rate: 20000 kbps
 4. Autodetect Public IP: Enabled
-5. Congestion Threshold: 1000000
+5. Congestion Threshold: 100,000 (100ms)
 
 ![](./images/citrix-sdwan-101-lab01-26.png)
 
@@ -288,7 +288,7 @@ SiteC: Internet线路
 2. Access Type: Public Intranet
 3. Physical Rate: 10000 kbps
 4. Autodetect Public IP: Enabled
-5. Congestion Threshold: 1000000
+5. Congestion Threshold: 100,000 (100ms)
 
 ![](./images/citrix-sdwan-101-lab01-38.png)
 
