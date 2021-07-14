@@ -93,7 +93,7 @@ y
 
 ![](./images/citrix-sdwan-101-lab02-05.png)
 
-选择菜单"Infrastracture - Orchestrator Diagnostics - Reboot Orchestrator VM"，点击"Reboot"进行重启 (目前有BUG，不建议操作)
+选择菜单"Infrastracture - Orchestrator Diagnostics - Reboot Orchestrator VM"，点击"Reboot"进行重启
 
 ![](./images/citrix-sdwan-101-lab02-06.png)
 
@@ -165,7 +165,7 @@ SD-WAN设备可以通过OOB带外管理网络访问Orchestrator for On-Premise�
 
 根据实验系统信息，变更如下配置，然后点击"Next"
 
-1. Device Model: VPX
+1. Device Model: VPX
 2. Sub-Model: BASE
 3. Site Role: MCN
 4. Bandwidth Tier(Mbps): 1,000
